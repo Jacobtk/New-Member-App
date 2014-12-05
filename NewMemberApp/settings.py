@@ -39,7 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # 'south',
+    'NewMemberApp',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,6 +51,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+LOCAL_APPS = (
+    'api',
 )
 
 ROOT_URLCONF = 'NewMemberApp.urls'
@@ -88,3 +93,4 @@ STATICFILES_DIRS = (
     '/var/www/static/',
 )
 # print STATIC_ROOT
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'NewMemberApp/templates')]

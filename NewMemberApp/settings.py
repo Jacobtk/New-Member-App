@@ -39,8 +39,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'easy_pdf',
     # 'NewMemberApp',
-    # 'api',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (

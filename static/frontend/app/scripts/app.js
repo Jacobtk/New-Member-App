@@ -25,6 +25,21 @@ newMemberApp.config(
 				controller: 'UserController'
 			}
 		).
+		when
+		('/lists/new/:unitName',
+			{
+				templateUrl: 'views/new-members.html',
+				controller: 'SigninController'
+			}
+		).
+		when
+		('/lists/current/:unitName',
+			{
+				templateUrl: 'views/members.html',
+				controller: 'SigninController'
+			}
+		
+		).
 		otherwise
 		(
 			{

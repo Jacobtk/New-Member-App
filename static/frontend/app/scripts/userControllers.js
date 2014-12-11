@@ -1,10 +1,11 @@
 'use strict';
 
-var newMemberApp = angular.module('newMemberApp', []);
+var newMemberAppControllers = angular.module('newMemberAppControllers', []);
 
-newMemberApp.controller('UserController', function($scope, $http) {
+newMemberAppControllers.controller('UserController', ['$scope', '$routeParams',
+function($scope, $routeParams) {
 	
-	$scope.unitName = "BYU Party Ward";
+	$scope.unitName = $routeParams.unitName;
 	$scope.fields = [
 	{'fieldName': 'Name',
 	'placeHolder': 'Your Name *',
@@ -30,5 +31,11 @@ newMemberApp.controller('UserController', function($scope, $http) {
   	$scope.submitted = false;
 /*  get fields from the database   */
   
-});
+}]);
+
+newMemberAppControllers.controller('SigninController', ['$scope',
+function($scope){
+	$scope.garbage = "LEMONS!!";
+	
+}]);
 

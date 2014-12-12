@@ -26,7 +26,7 @@ newMemberApp.config(
 			}
 		).
 		when
-		('/form/:unitName', 
+		('/form/:unitID', 
 			{
 				templateUrl: 'views/form.html',
 				controller: 'UserController'

@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                <th ng-repeat="(field, response) in newMemberCtrl.newMembers[0]">
+
+                {{field}}
+
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="newMember in newMemberCtrl.newMembers">
+                <td ng-repeat="(field, response) in newMember">
+                
+                {{response}}
+                
+                </td>
+            </tr>            
+        </tbody>
+    </table>
+</div>

@@ -19,6 +19,13 @@ newMemberApp.config(
 			}
 		). 
 		when
+		('/thankyou/:unitName',
+			{
+				templateUrl: 'views/thankyou.html',
+				controller: 'UserController'
+			}
+		).
+		when
 		('/form/:unitName', 
 			{
 				templateUrl: 'views/form.html',
@@ -37,13 +44,6 @@ newMemberApp.config(
 			{
 				templateUrl: 'views/members.html',
 				controller: 'SigninController'
-			}
-		
-		).
-		otherwise
-		(
-			{
-				redirectTo: '/signin'
 			}
 		);
 	}

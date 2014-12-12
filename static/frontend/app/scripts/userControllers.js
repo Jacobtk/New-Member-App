@@ -6,25 +6,8 @@ newMemberAppControllers.controller('UserController', ['$scope', '$routeParams',
 function($scope, $routeParams) {
 	
 	$scope.unitName = $routeParams.unitName;
-	$scope.fields = [
-	{'fieldName': 'Name',
-	'placeHolder': 'Your Name *',
-	'requiredMessage': 'Please enter your name.'},
-	{'fieldName': 'YearInSchool',
-	'placeHolder': 'Your Year In School *',
-	'requiredMessage': 'Please enter your year in school.'}, 
-	{'fieldName': 'Name',
-	'placeHolder': 'Your Name *',
-	'requiredMessage': 'Please enter your name.'},
-	{'fieldName': 'YearInSchool',
-	'placeHolder': 'Your Year In School *',
-	'requiredMessage': 'Please enter your year in school.'},
-	{'fieldName': 'Name',
-	'placeHolder': 'Your Name *',
-	'requiredMessage': 'Please enter your name.'},
-	{'fieldName': 'YearInSchool',
-	'placeHolder': 'Your Year In School *',
-	'requiredMessage': 'Please enter your year in school.'}  
+	$scope.fields = [1,2,3,45,6,7844
+
 	];
  
   	$scope.currentUser = "Bob";

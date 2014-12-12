@@ -6,7 +6,7 @@ this.createServerRoot = function(){
   if(currentUrl.indexOf('localhost') > -1 || currentUrl.indexOf('127.0.0') > -1){
     return 'http://localhost:8000/api/';
   } else{
-    return 'http://newmemberapp.herokuapp.com/api/';
+    return 'http://104.131.150.102:8000/api/';
   }
 };
 

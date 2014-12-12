@@ -55,7 +55,7 @@ def generate_pdf(response, id):
     width, height = letter
 
     remaining_space = letter
-    print pdf.getAvailableFonts()
+    # print pdf.getAvailableFonts()
     pdf.setFont('Times-Roman', 15)
     remaining_space = generate_header(pdf, id, remaining_space)
     remaining_space = generate_core_data_entries(pdf, id, remaining_space)

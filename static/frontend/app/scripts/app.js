@@ -2,7 +2,10 @@
 
 var newMemberApp = angular.module('newMemberApp', [
 	'ngRoute',
-	'newMemberAppControllers'
+    'ngResource',
+    'frontendApp.constants'
+//    ,
+//	'newMemberAppControllers'
 ]);
 
 newMemberApp.config(
@@ -19,14 +22,14 @@ newMemberApp.config(
 			}
 		). 
 		when
-		('/thankyou/:unitName',
+		('/thankyou/:unitID',
 			{
 				templateUrl: 'views/thankyou.html',
 				controller: 'UserController'
 			}
 		).
 		when
-		('/form/:unitName', 
+		('/form/:unitID', 
 			{
 				templateUrl: 'views/form.html',
 				controller: 'UserController'

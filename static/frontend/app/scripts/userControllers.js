@@ -7,8 +7,10 @@ function($scope, $routeParams, $resource, apiRoot) {
 
 	$scope.unitID = $routeParams.unitID;
 
-  $scope.unit = $resource(apiRoot + 'unit').query();
-  $scope.customFields = $resource(apiRoot + 'unit/' + $routeParams.unitID + '/entries');
+  $scope.unit = $resource(apiRoot + 'units/' + $scope.unitID, {
+          'query': { method:'GET', isArray:false }
+        }).get();
+  $scope.customFields = $resource(apiRoot + 'unit/' + $routeParams.unitID + '/entries').query();
 
   $scope.foo = apiRoot;
   $scope.members = $resource(apiRoot + 'members').query();

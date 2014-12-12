@@ -10,6 +10,16 @@ function($scope, $routeParams, $resource, apiRoot) {
   $scope.unit = $resource(apiRoot + 'units/' + $scope.unitID, {
           'query': { method:'GET', isArray:false }
         }).get();
+
+  $scope.newMember = $resource(apiRoot + 'members/');
+
+  $scope.saveMember = function(){
+      $scope.saveMember.$save().then(function(){
+          $scope.newMember.unit = $routeParams.unitID;
+          $scope.newMember = $resource(apiRoot + 'members/');
+      })
+  };
+
   $scope.customFields = $resource(apiRoot + 'unit/' + $routeParams.unitID + '/entries').query();
 
   $scope.foo = apiRoot;

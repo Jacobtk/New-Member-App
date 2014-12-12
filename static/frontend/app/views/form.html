@@ -85,17 +85,44 @@
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">  
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="newMember.full_name" placeholder= "Your Full Name" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="newMember.preferred_name" placeholder= "Your Preferred Name" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="newMember.phone" placeholder= "Your Phone Number" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="newMember.address" placeholder= "Your Address" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="newMember.email" placeholder= "Your Email" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" ng-model="newMember.date_of_birth" placeholder= "Your Birth Date" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                
 								<div class="form-group" ng-repeat="field in fields">
-									<input type="text" class="form-control" ng-model="field.value" placeholder={{field.placeHolder}} id={{field.fieldName}} required data-validation-required-message={{field.requiredMessage}}>
+									<input type="text" class="form-control" ng-model="field.value" placeholder="{{field.placeHolder}}" id="{{field.fieldName}}" required>
                                     <p class="help-block text-danger"></p>
 								</div>
+                                
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl btn-success" ng-click ="">Submit Form</button> <!-- add functionality here to store the field data into the database -->
+                                <button type="submit" class="btn btn-xl btn-success" ng-click ="saveMember()">Submit Form</button> <!-- add functionality here to store the field data into the database -->
 								
                             </div>
+                            {{newMember.full_name}}
                         </div>
                     </form>
                 </div>

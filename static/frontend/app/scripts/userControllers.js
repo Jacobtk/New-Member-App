@@ -5,7 +5,7 @@ var newMemberAppControllers = angular.module('newMemberApp');
 newMemberAppControllers.controller('UserController', ['$scope', '$routeParams', '$resource', 'apiRoot',
 function($scope, $routeParams, $resource, apiRoot) {
 
-	$scope.unitID = $routeParams.unitID;
+  $scope.unitID = $routeParams.unitID;
 
   $scope.unit = $resource(apiRoot + 'units/' + $scope.unitID, {
           'query': { method:'GET', isArray:false }

@@ -13,4 +13,9 @@ urlpatterns = patterns('',
     url(r'^', include(router.urls)),
     url(r'^api/v1/', include('api.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api/auth/$',
+        views.AuthView.as_view(),
+        name='authenticate'),
+    url(r'^people/(?P<pk>\d+)$', views.pdf_view,
+        name='hello')
 )

@@ -44,6 +44,12 @@ class Household(MembershipEntity):
 
 class Member(MembershipEntity):
     full_name = models.CharField(max_length=300)
+    preferred_name = models.CharField(max_length=300, blank=True, null=True)
+    unit = models.ForeignKey('api.ChurchUnit')
+    phone = models.CharField(max_length=11)
+    address = models.CharField(max_length=100)
+    date_of_birth = models.CharField(max_length=30)
+    email = models.EmailField(max_length=70, blank=True, null=True)
     # household = models.ForeignKey(Household)
 
 

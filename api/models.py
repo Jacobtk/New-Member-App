@@ -58,6 +58,7 @@ class Survey(BaseModel):
 
 
 class ChurchUnit(BaseModel):
+    name = models.CharField(max_length=50)
     bishop = models.ForeignKey(Member)
     id = models.IntegerField(primary_key=True)
     # schedule

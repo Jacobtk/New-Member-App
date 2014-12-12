@@ -50,6 +50,7 @@ class Member(MembershipEntity):
     address = models.CharField(max_length=100)
     date_of_birth = models.CharField(max_length=30)
     email = models.EmailField(max_length=70, blank=True, null=True)
+    status = models.CharField(max_length=15, default="new")
     # household = models.ForeignKey(Household)
 
 

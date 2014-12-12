@@ -38,4 +38,8 @@ router.register(r'addresses', views.AddressViewSet)
 
 urlpatterns = patterns('',
     url(r'^', include(router.urls)),
+    url(r'^unit/(?P<pk>\d+)/entries/$', views.CustomFieldByUnitViewSet.as_view(),
+                           name='Unit-Custom-Field'),
+    url(r'^CustomField/(?P<pk>\d+)/Entries/$', views.CustomFieldEntryByCustomField.as_view(),
+                           name='Entry-By-Field'),
 )

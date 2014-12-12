@@ -19,7 +19,7 @@ newMemberApp.config(
 			}
 		). 
 		when
-		('/thankyou/:unitName',
+		('/thankyou/:unitID',
 			{
 				templateUrl: 'views/thankyou.html',
 				controller: 'UserController'

@@ -41,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#form/{{unitName}}/#page-top">{{unitName}}</a>
+                <a class="navbar-brand page-scroll" href="#form/{{unitID}}/#page-top">{{unitID}}</a>
 
             </div>
             
@@ -49,10 +49,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#/form/{{unitName}}/#page-top"></a>
+                        <a href="#/form/{{unitID}}/#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href= "#/form/{{unitName}}/#contact" >New Member Form</a>
+                        <a class="page-scroll" href= "#/form/{{unitID}}/#contact" >New Member Form</a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +67,7 @@
             <div class="intro-text">
                 <!-- <div class="intro-lead-in">Welcome To Our Ward!</div> -->
                 <div class="intro-heading">Welcome To Our Ward!</div>
-                <a href="#/form/{{unitName}}/#contact" class="page-scroll btn btn-xl btn-welcome" ng-show="{{fields.length != 0}}">Transfer Records</a>
+                <a href="#/form/{{unitID}}/#contact" class="page-scroll btn btn-xl btn-welcome" ng-show="{{fields.length != 0}}">Transfer Records</a>
             </div>
         </div>
     </header>
@@ -86,7 +86,7 @@
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">  
 								<div class="form-group" ng-repeat="field in fields">
-									<input type="text" class="form-control" ng-model="field.value" placeholder={{field.placeHolder}} id={{field.name}} required data-validation-required-message={{field.requiredMessage}}>
+									<input type="text" class="form-control" ng-model="field.value" placeholder={{field.placeHolder}} id={{field.fieldName}} required data-validation-required-message={{field.requiredMessage}}>
                                     <p class="help-block text-danger"></p>
 								</div>
                             </div>
